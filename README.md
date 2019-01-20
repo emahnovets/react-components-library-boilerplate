@@ -1,5 +1,8 @@
 # React Components Library Boilerplate
 
+[![Build Status](https://travis-ci.org/emahnovets/react-components-library-boilerplate.svg?branch=master)](https://travis-ci.org/emahnovets/react-components-library-boilerplate)
+[![airbnb-style](https://img.shields.io/badge/eslint-airbnb-4B32C3.svg)](https://github.com/airbnb/javascript)
+
 Simple boilerplate for easy creation of own react components library.
 
 ## Basic usage

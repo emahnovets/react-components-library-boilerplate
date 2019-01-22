@@ -19,14 +19,10 @@ module.exports = [
   {
     test: /\.scss$/,
     exclude: /\.module\.scss$/,
-    use: ['style-loader', CSSLoader, 'sass-loader']
+    use: ['style-loader', CSSLoader, 'postcss-loader', 'sass-loader']
   },
   {
     test: /\.module\.scss$/,
-    use: [
-      'style-loader',
-      CSSModuleLoader,
-      'sass-loader',
-    ]
+    use: [ 'style-loader', CSSModuleLoader, 'postcss-loader', 'sass-loader']
   }
 ]

@@ -1,0 +1,10 @@
+{
+  "defaultSeverity": "error",
+  "extends": "stylelint-config-airbnb",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "scss/at-extend-no-missing-placeholder": true
+  }
+}

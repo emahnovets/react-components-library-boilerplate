@@ -2,7 +2,7 @@ import { configureToMatchImageSnapshot } from 'jest-image-snapshot'
 import BrowserService from '../test-helpers/BrowserService';
 
 expect.extend({ toMatchImageSnapshot: configureToMatchImageSnapshot({
-  failureThreshold: 0.01,
+  failureThreshold: 0.005,
   failureThresholdType: 'percent',
 }) });
 

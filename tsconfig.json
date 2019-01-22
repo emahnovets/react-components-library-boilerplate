@@ -23,5 +23,12 @@
     "emitDecoratorMetadata": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "scripts", "src/**/*.spec.ts", "src/**/*.stories.tsx"]
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "scripts", 
+    "src/**/*.spec.ts", 
+    "src/**/*.spec.tsx", 
+    "test-helpers"
+  ]
 }

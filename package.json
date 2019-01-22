@@ -35,6 +35,7 @@
     "enzyme-to-json": "^3.3.5",
     "husky": "^1.3.1",
     "identity-obj-proxy": "^3.0.0",
+    "if-env": "^1.0.4",
     "jest": "^23.6.0",
     "jest-image-snapshot": "^2.7.0",
     "lint-staged": "^8.1.0",
@@ -79,10 +80,14 @@
     "test": "yarn lint && yarn test:unit && yarn ci:integration",
     "test:unit": "jest",
     "test:integration": "jest -c jest.integration.config.js",
+    "test:update:image-snapshots": "jest -c jest.integration.config.js -u",
+    "update:image-snapshots": "start-server-and-test start:ci http-get://localhost:8081 test:update:image-snapshots",
     "precommit": "lint-staged",
     "format:ts": "prettier \"src/**/*.{ts,tsx}\" --write",
     "format:scss": "prettier \"src/**/*.scss\" --write",
-    "ci:integration": "start-server-and-test start:ci http-get://localhost:8081 test:integration"
+    "ci:integration": "start-server-and-test start:ci http-get://localhost:8081 test:integration",
+    "preversion": "yarn test && yarn build && git add --force dist/",
+    "postversion": "commit_message=$(git log -1 --format=%B) && git reset --soft HEAD~1 && git reset dist/ && git commit -m $commit_message"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

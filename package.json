@@ -87,7 +87,7 @@
     "format:scss": "prettier \"src/**/*.scss\" --write",
     "ci:integration": "start-server-and-test start:ci http-get://localhost:8081 test:integration",
     "preversion": "yarn test && yarn build && git add --force dist/",
-    "postversion": "commit_message=$(git log -1 --format=%B) && git reset --soft HEAD~1 && git reset dist/ && git commit -m $commit_message"
+    "postversion": "commit_message=$(git log -1 --format=%B) && git reset --soft HEAD~1 && git reset dist/ && git commit -m $commit_message && git push && git push --tags"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

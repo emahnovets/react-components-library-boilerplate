@@ -1,6 +1,6 @@
 {
   "name": "react-components-library-boilerplate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./dist/index.js",
   "repository": "https://github.com/emahnovets/react-components-library-boilerplate",
   "author": "Evgeny Mahnovets <evgeny.mahnovets@gmail.com>",
